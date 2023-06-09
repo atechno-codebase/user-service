@@ -1,0 +1,50 @@
+http://localhost:8082
+-i
+-s
+Accept: */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hc3RlciIsImluc3RpdHV0ZSI6Im5pdiIsImRlc2lnbmF0aW9uIjoic3VwZXJhZG1pbiIsImlhdCI6MTY2ODM0NjQwN30.e4Hs0UXFtRiVSFmNaGqgJSXa97KaDdMWPaMVFSyeB7w
+--
+
+--
+POST /register
+{
+	"username": "kaustubh",
+	"password": "kaustubh",
+	"email": "kaustubh.murumkar@gmail.com",
+	"institute": "jspm",
+	"designation": "admin"
+}
+
+--
+POST /login
+{
+  "username": "master",
+  "password": "admin1234"
+}
+
+--
+POST /login
+{
+  "username": "kaustubh",
+  "password": "kaustubh"
+}
+
+--
+GET /about
+
+--
+GET /allusers
+
+--
+POST /verify
+
+--
+POST /forgot
+
+--
+POST /reset
+
+
+--
+DELETE /delete
+

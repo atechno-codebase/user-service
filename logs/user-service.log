@@ -1,0 +1,52 @@
+user-service: 2022/11/23 19:48:10 started server on port: :8082
+user-service: 2022/11/23 20:03:37 started server on port: :8082
+user-service: 2022/11/23 20:03:48 http: panic serving 127.0.0.1:35926: runtime error: invalid memory address or nil pointer dereference
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/home/kaustubh/Documents/go/src/net/http/server.go:1850 +0xbf
+panic({0x68bfc0, 0x8ce8a0})
+	/home/kaustubh/Documents/go/src/runtime/panic.go:890 +0x262
+ates/services/user-service/server.RegisterUser({0x747b20, 0xc000186000}, 0x67d820?)
+	/home/kaustubh/Documents/go/src/ates/services/user-service/server/user.go:9 +0x2c
+ates/services/user-service/server.authMiddleware.func1({0x747b20, 0xc000186000}, 0xc00017c200)
+	/home/kaustubh/Documents/go/src/ates/services/user-service/server/token.go:83 +0x659
+net/http.HandlerFunc.ServeHTTP(0xc00017c100?, {0x747b20?, 0xc000186000?}, 0x800?)
+	/home/kaustubh/Documents/go/src/net/http/server.go:2109 +0x2f
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc00015c000, {0x747b20, 0xc000186000}, 0xc00017c000)
+	/home/kaustubh/Documents/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1cf
+net/http.serverHandler.ServeHTTP({0x746e90?}, {0x747b20, 0xc000186000}, 0xc00017c000)
+	/home/kaustubh/Documents/go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc000001a40, {0x747f80, 0xc00007f680})
+	/home/kaustubh/Documents/go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	/home/kaustubh/Documents/go/src/net/http/server.go:3102 +0x4db
+user-service: 2022/11/23 20:06:58 started server on port: :8082
+user-service: 2022/11/23 20:07:19 &{0xc000012378 <nil> <nil> false true {0 0} false false false 0x640340}
+user-service: 2022/11/23 20:12:14 started server on port: :8082
+user-service: 2022/11/23 20:12:16 [123 32 32 34 117 115 101 114 110 97 109 101 34 58 32 34 109 97 115 116 101 114 34 125]
+user-service: 2022/11/23 20:12:29 started server on port: :8082
+user-service: 2022/11/23 20:12:30 {  "username": "master"}
+user-service: 2022/11/23 20:14:42 {	"username": "kaustubh",	"password": "kaustubh",	"email": "kaustubh.murumkar@gmail.com",	"institute": "jspm",	"designation": "admin"}
+user-service: 2022/11/23 20:21:54 started server on port: :8082
+user-service: 2022/11/23 20:23:50 started server on port: :8082
+user-service: 2022/11/23 20:23:56 http: panic serving 127.0.0.1:35960: interface conversion: interface {} is nil, not string
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/home/kaustubh/Documents/go/src/net/http/server.go:1850 +0xbf
+panic({0x872860, 0xc0001aecf0})
+	/home/kaustubh/Documents/go/src/runtime/panic.go:890 +0x262
+ates/services/user-service/server.RegisterUser({0xa247d0, 0xc0001ce000}, 0xc0001ca300)
+	/home/kaustubh/Documents/go/src/ates/services/user-service/server/user.go:35 +0x408
+ates/services/user-service/server.authMiddleware.func1({0xa247d0, 0xc0001ce000}, 0xc0001ca200)
+	/home/kaustubh/Documents/go/src/ates/services/user-service/server/token.go:83 +0x659
+net/http.HandlerFunc.ServeHTTP(0xc0001ca100?, {0xa247d0?, 0xc0001ce000?}, 0x800?)
+	/home/kaustubh/Documents/go/src/net/http/server.go:2109 +0x2f
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc0001a8000, {0xa247d0, 0xc0001ce000}, 0xc0001ca000)
+	/home/kaustubh/Documents/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1cf
+net/http.serverHandler.ServeHTTP({0xa236b0?}, {0xa247d0, 0xc0001ce000}, 0xc0001ca000)
+	/home/kaustubh/Documents/go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b40a0, {0xa24cc0, 0xc0001ae600})
+	/home/kaustubh/Documents/go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	/home/kaustubh/Documents/go/src/net/http/server.go:3102 +0x4db
+user-service: 2022/11/23 20:25:56 started server on port: :8082
