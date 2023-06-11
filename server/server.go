@@ -9,7 +9,7 @@ import (
 )
 
 func Start() {
-	PORT := config.Get("port").String()
+	PORT := config.Configuration.Port
 	r := mux.NewRouter()
 	initRouter(r)
 
@@ -34,16 +34,5 @@ func initRouter(r *mux.Router) {
 	r.HandleFunc("/delete", DeleteUser).Methods(http.MethodDelete)
 
 	r.Handle("/about", authMiddleware(GetProfile)).Methods(http.MethodGet)
-
-	/*
-		r.Walk(func(route *mux.Route, router *mux.Router, ancestors []*mux.Route) error {
-			methods, _ := route.GetMethods()
-			pre, _ := route.GetPathRegexp()
-			pre = strings.ReplaceAll(pre, "^", "")
-			pre = strings.ReplaceAll(pre, "$", "")
-			fmt.Printf("\n%+v %v\n", methods[0], pre)
-			return nil
-		})
-	*/
 
 }

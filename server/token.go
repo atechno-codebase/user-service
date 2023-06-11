@@ -71,7 +71,7 @@ func authMiddleware(next http.HandlerFunc) http.HandlerFunc {
 			return
 		}
 
-		claims, err := VerifyToken(jwtToken, config.Get("secretToken").String())
+		claims, err := VerifyToken(jwtToken, config.Configuration.SecretToken)
 		if err != nil {
 			log.Println("error while decoding jwt token:", err)
 			http.Error(w, err.Error(), http.StatusInsufficientStorage)
